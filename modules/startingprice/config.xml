@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>startingprice</name>
+    <displayName><![CDATA[Starting Price module]]></displayName>
+    <version><![CDATA[0.0.1]]></version>
+    <description><![CDATA[Adds the ability to show the starting price of a product with variations.]]></description>
+    <author><![CDATA[Romain Coumans]]></author>
+    <tab><![CDATA[front_office_features]]></tab>
+	<confirmUninstall><![CDATA[Are you sure you want to uninstall?]]></confirmUninstall>
+    <is_configurable>0</is_configurable>
+    <need_instance>0</need_instance>
+</module>
