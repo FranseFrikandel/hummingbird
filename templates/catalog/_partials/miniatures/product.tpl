@@ -61,6 +61,7 @@
                       {if $product.has_discount}
                         {hook h='displayProductPriceBlock' product=$product type="old_price"}
 
+<<<<<<< HEAD
                         <span class="{$componentName}__regular-price" aria-label="{l s='Regular price' d='Shop.Theme.Catalog'}">{$product.regular_price}</span>
                       {/if}
                     </div>
@@ -68,6 +69,15 @@
                 {/block}
               </div>
             {/if}
+=======
+                      <span class="{$componentName}__regular-price"
+                        aria-label="{l s='Regular price' d='Shop.Theme.Catalog'}">{$product.regular_price}</span>
+                    {/if}
+                  </div>
+                {/if}
+              {/block}
+            </div>
+>>>>>>> dc7c88c4 (fix: increase thumbnail resolution)
 
             {block name='product_reviews'}
               {hook h='displayProductListReviews' product=$product}
@@ -76,17 +86,31 @@
 
           <div class="{$componentName}__actions">
             {if $product.add_to_cart_url}
+<<<<<<< HEAD
               <form class="{$componentName}__form" action="{$urls.pages.cart}" method="post">
+=======
+              <form action="{$urls.pages.cart}" method="post"
+                class="d-flex flex-wrap flex-md-nowrap gap-3 align-items-center mt-3">
+>>>>>>> dc7c88c4 (fix: increase thumbnail resolution)
                 <input type="hidden" value="{$product.id_product}" name="id_product">
                 <input type="hidden" name="token" value="{$static_token}">
 
                 <div class="quantity-button js-quantity-button">
                   {include file='components/qty-input.tpl'
+<<<<<<< HEAD
                     attributes=[
                       "id" => "quantity_wanted_{$product.id_product}",
                       "value" => "{$product.quantity_wanted}",
                       "min" => "{$product.quantity_required}"
                     ]
+=======
+                          attributes=[
+                            "id" => "quantity_wanted_{$product.id_product}",
+                  "value" => "{$product.minimal_quantity}",
+                  "min" => "{$product.minimal_quantity}"
+                  ]
+                  marginHelper="mb-0"
+>>>>>>> dc7c88c4 (fix: increase thumbnail resolution)
                   }
                 </div>
 
