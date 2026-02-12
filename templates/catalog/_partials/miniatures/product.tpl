@@ -46,7 +46,8 @@
                     {if '' !== $smarty.capture.custom_price}
                       {$smarty.capture.custom_price nofilter}
                     {else}
-                      {$product.price}
+                      {hook h='displayProductPriceBlock' product=$product type="lowest_variant_price"}
+                      {* {$product.price} *}
                     {/if}
                   </div>
 
@@ -98,6 +99,7 @@
                 <div class="quantity-button js-quantity-button">
                   {include file='components/qty-input.tpl'
 <<<<<<< HEAD
+<<<<<<< HEAD
                     attributes=[
                       "id" => "quantity_wanted_{$product.id_product}",
                       "value" => "{$product.quantity_wanted}",
@@ -106,6 +108,10 @@
 =======
                           attributes=[
                             "id" => "quantity_wanted_{$product.id_product}",
+=======
+                                attributes=[
+                                  "id" => "quantity_wanted_{$product.id_product}",
+>>>>>>> 8e3b08c1 (Hook startingprice module)
                   "value" => "{$product.minimal_quantity}",
                   "min" => "{$product.minimal_quantity}"
                   ]
